@@ -1,0 +1,189 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Jo}{Kroese}
+
+\position{Statistical consultant and data scientist}
+\address{Amsterdam, Netherlands}
+
+\mobile{+44 7804 479 238}
+\email{\href{mailto:jo@jokroese.com}{\nolinkurl{jo@jokroese.com}}}
+\homepage{jokroese.com}
+\linkedin{jokroese}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+\quote{I am a data scientist who believes data can help us build a world
+that is more joyful and just. I have worked in a diverse range of areas,
+from calculating the number of fish caught in the sea for the UK
+government to founding a citizen-centred research organisation.}
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {October 2021}
+    {Jo Kroese~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{work}{%
+\section{Work}\label{work}}
+
+\begin{cventries}
+    \cventry{Statistical Consultant and Founder}{The Open Consultancy}{Amsterdam, Netherlands}{2018 - Present}{\begin{cvitems}
+\item Consult for a range of large international organisations including FSC, the UK government, DEFRA, Sport England and UEFA.
+\item Redesigned the UK's analysis of how much fish is caught, saving the government over half a million pounds each year.
+\item Designed FSC's risk score system, estimating the risk of almost one hundred thousand forestry projects.
+\end{cvitems}}
+    \cventry{Associate Researcher}{Substance}{Manchester, England}{2018 - Present}{\begin{cvitems}
+\item Collaborate on national projects in health and environment policy.
+\end{cvitems}}
+    \cventry{Founder}{Radical Data}{Amsterdam, Netherlands}{2019 - Present}{\begin{cvitems}
+\item Run a research organisation focused on how data science can be used as a tool for citizen empowerment through art, activism and policy.
+\item Supported by a research grant from Stimuleringsfonds, Netherlands.
+\item Spoken internationally, from lectures at Edinburgh University and Université de Montréal to public talks at Mozilla Festival and Digital Arts Zurich.
+\end{cvitems}}
+    \cventry{Musician}{Jobi}{Amsterdam, Netherlands}{2019 - Present}{\begin{cvitems}
+\item Perform live coded dance music internationally, from Amsterdam to Medellín, Colombia.
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Mathematics, MMath (Hons) ∙ First Class}{University of Manchester}{Manchester, England}{2013 - 2018}{\begin{cvitems}
+\item Integrated masters degree with focus on applied maths, statistics and computer science
+\item Masters dissertation on `Network Models of Political Repression and Revolution'
+\end{cvitems}}
+    \cventry{Mathematics, Exchange Year}{McGill University}{Montréal, Canada}{2016 - 2017}{\begin{cvitems}
+\item Courses studied include graduate courses in economics, mathematics and computer science
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{selected-software-development}{%
+\section{Selected software
+development}\label{selected-software-development}}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{\href{https://joekroese.github.io/tidymrp/}{tidymrp}}: Author \newline Easy-to-run multilevel regression and poststratification (MRP) analyses in R.}{}{2021\newline}
+    \cvhonor{}{\textbf{\href{https://joekroese.github.io/tidymine/}{tidymine}}: Author \newline Robust variable selection.}{}{2020\newline}
+    \cvhonor{}{\textbf{\href{https://tiddlyroam.org}{tiddlyroam}}: Author \newline Open source software to create your own personal wikipedia that has been downloaded over 20,000 times.}{}{2020\newline}
+\end{cvhonors}
+
+\hypertarget{languages}{%
+\section{Languages}\label{languages}}
+
+English ∙ French ∙ Dutch
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{cvhonors}
+    \cvhonor{}{\textbf{\href{https://www.cefas.co.uk/about-us/people/kieran-hyder/}{Dr Kieran Hyder}}: Principal Scientist, Cefas.}{}{}
+    \cvhonor{}{\textbf{\href{https://www.substance.net/team/gavin-mellor/}{Dr Gavin Mellor}}: Director and Head of Data and Consultancy, Substance.}{}{}
+\end{cvhonors}
+
+\end{document}
