@@ -1,0 +1,89 @@
+---
+name: Jo
+surname: Kroese
+position: "Científico de datos y artista"
+address: "Amsterdam, Netherlands"
+phone: +44 7804 479 238
+www: jokroese.com
+email: "jo@jokroese.com"
+# twitter: joekroese
+# github: joekroese
+linkedin: jokroese
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: >
+  Utilizar los datos para ayudar a construir un mundo más alegre y justo.
+headcolor: "414141"
+output:
+  vitae::awesomecv:
+    keep_tex: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Trabajo
+
+```{r work}
+tribble(
+  ~job, ~year, ~company, ~where, ~description,
+  "Consultor estadístico y fundador", "2018 - Presente", "The Open Consultancy", "Ámsterdam, Países Bajos",
+  list("Consultar para una serie de grandes organizaciones internacionales, como FSC, el gobierno del Reino Unido, DEFRA, Sport England y UEFA",
+       "Rediseñó el análisis del Reino Unido sobre la cantidad de pescado que se captura, ahorrando al gobierno más de medio millón de libras cada año",
+       "Diseñó el sistema de puntuación de riesgos del FSC, estimando el riesgo de casi cien mil proyectos forestales"),
+       # "My research for Sport England has led to the creation of a multidisciplinary research group on activity inequality."),
+  "Investigador asociado", "2018 - Presente", "Substance", "Manchester, Inglaterra", "Colaborar en proyectos nacionales de política sanitaria y medioambiental",
+  "Fundador", "2019 - Presente", "Radical Data", "Ámsterdam, Países Bajos",
+  list("Dirigir una organización de investigación centrada en cómo la ciencia de los datos puede utilizarse como herramienta para el empoderamiento ciudadano a través del arte, el activismo y la política",
+       "Apoyado por una beca de investigación de Stimuleringsfonds, Holanda",
+       "Habló internacionalmente sobre el arte de los datos y el activismo, incluyendo conferencias en la Universidad de Edimburgo y la Universidad de Montreal y charlas públicas como Good Tech Fest en Chicago, Mozilla Festival en Ámsterdam y Data Natives en Berlín"),
+  "Músico", "2019 - Presente", "Jobi", "Ámsterdam, Países Bajos", "Realiza música de baile codificada en vivo a nivel internacional, desde Ámsterdam hasta Medellín, Colombia",
+  # "Head of Technology", "2017 - 2018", "AI Patient", "Manchester, England", "Led software development at a medical technology startup designing AI chatbots to train medical students."
+) %>%
+  detailed_entries(job, year, company, where, description, .protect = TRUE)
+```
+
+# Educación
+
+```{r education}
+tribble(
+  ~ degree, ~ year, ~ institution, ~ classification, ~ details,
+  "Matemáticas, MMath (Hons) ∙ Primera Clase", "2013 - 2018", "Universidad de Manchester", "Manchester, Inglaterra",
+  list("Máster integrado centrado en matemáticas aplicadas, estadística e informática",
+       "Tesis de maestría sobre `Modelos de red de represión política y revolución'"),
+  "Matemáticas, año de intercambio", "2016 - 2017", "Universidad McGill", "Montreal, Canadá", "Los cursos estudiados incluyen cursos de posgrado en economía, matemáticas e informática",
+  # "Physics with Philosophy", "2013 - 2014", "University of Manchester", "First Class Average", "Pursued one year of undergraduate study"
+) %>% 
+  detailed_entries(degree, year, institution, classification, details)
+```
+
+<!-- # Programming languages -->
+
+<!-- R - Python - Java - Javascript - CSS - HTML - Mathematica -->
+
+# Desarrollo de software seleccionado
+
+```{r software}
+tribble(
+  ~ software, ~ when, ~ role, ~ details, ~ url,
+  "tidymrp", "2021", "Autor", "Análisis de regresión multinivel y postestratificación (MRP) fáciles de ejecutar en R.", "https://joekroese.github.io/tidymrp/",
+  # "tidymine", "2020", "Autor", "Selección robusta de variables", "https://joekroese.github.io/tidymine/",
+  "tiddlyroam", "2020", "Autor", "Software de código abierto para crear tu propia wikipedia personal que ha sido descargado más de 20.000 veces.", "https://tiddlyroam.org") |> 
+  brief_entries(glue::glue("\\textbf{\\href{<url>}{<software>}}: <role> \\newline <details>", .open = "<", .close = ">"), paste0(when, "\\newline"), .protect = FALSE)
+```
+
+# Idiomas
+
+Inglés ∙ Holandés ∙ Español ∙ Francés
+
+# Referencias
+
+```{r references}
+tribble(
+  ~ name, ~ role, ~ organisation, ~ url,
+  "Dr. Kieran Hyder", "Científico principal", "Cefas", "https://www.cefas.co.uk/about-us/people/kieran-hyder/",
+  "Dr. Gavin Mellor", "Director y Jefe de Datos y Consultoría", "Substance", "https://www.substance.net/team/gavin-mellor/") |>
+  brief_entries(glue::glue("\\textbf{\\href{<url>}{<name>}}: <role>, <organisation>.", .open = "<", .close = ">"), .protect = FALSE)
+```
